@@ -8,6 +8,8 @@ function Navbar() {
     <p className='text-neutral-600'><Link to='/'>Home</Link></p>
     <p className='text-neutral-600'><Link to='/sushitype'>Sushi Types</Link></p>
     <p className='text-neutral-600'><Link to='/fish'>Fish</Link></p>
+    <p className='text-neutral-600'><Link to='/glossary'>Sushi Translation</Link></p>
+
     </div>
     </div>
   )

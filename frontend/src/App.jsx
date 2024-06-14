@@ -4,6 +4,7 @@ import Landing from './component/Landing'
 import SushiType from './routes/SushiType'
 import Fish from './routes/Fish'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Glossary from './routes/Glossary'
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Route index element={<Landing />} />
       <Route path="/sushitype" element={<SushiType />} />
       <Route path="/fish" element={<Fish />} />
+      <Route path="/glossary" element={<Glossary />} />
 
     </Routes>
     </div>
