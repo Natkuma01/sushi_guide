@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './Fish.css'
+import './FishCategory.css'
 
 
 
-function fish() {
+function FishCategory() {
   const [fishCategory, setFishCategory] = useState([])
   
   useEffect(()=> {
@@ -49,4 +49,4 @@ function fish() {
 
 
 
-export default fish
+export default FishCategory

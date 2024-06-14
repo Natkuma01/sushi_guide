@@ -25,7 +25,7 @@ class FishSerializer(serializers.ModelSerializer):
             'image1',
             'image2',
             'image3',
-            'family'
+            'family',
             'description',
             'taste',
             'texture',

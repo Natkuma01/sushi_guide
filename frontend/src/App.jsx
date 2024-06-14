@@ -2,7 +2,7 @@ import './App.css'
 import Navbar from './component/Navbar'
 import Landing from './component/Landing'
 import SushiType from './routes/SushiType'
-import Fish from './routes/Fish'
+import FishCategory from './routes/FishCategory'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Glossary from './routes/Glossary'
 
@@ -15,16 +15,16 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    {/* <Navbar /> */}
-    <div>
+    <div className='flex flex-row'>
+    <div className='basis-1/5'><Navbar /></div>
+    <div className='basis-4/5'>
     <Routes>
       <Route index element={<Landing />} />
       <Route path="/sushitype" element={<SushiType />} />
-      <Route path="/fish" element={<Fish />} />
+      <Route path="/fishcategory" element={<FishCategory />} />
       <Route path="/glossary" element={<Glossary />} />
-
     </Routes>
-    </div>
+    </div></div>
     </BrowserRouter>
     </>
   )
