@@ -1,14 +1,13 @@
 import React from 'react'
 import { landingPageSushiPic } from '../assets/constants'
-import Navbar from './Navbar'
 
 function Landing() {
   return (
     <>
   
-    <div className='pl-20'>
+    <div className='pl-20 mb-20'>
     <h1 className='flex items-center justify-center mt-10 font-bold text-4xl'>Sushi 101</h1>
-    <div className='flex items-center justify-center mt-10'>
+    <div className='flex items-center justify-center my-10'>
         <img className='max-w-[700px] rounded-lg drop-shadow-lg' src={landingPageSushiPic} alt="Sushi" />
     </div>
     <div>

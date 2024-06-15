@@ -5,6 +5,7 @@ import SushiType from './routes/SushiType'
 import FishCategory from './routes/FishCategory'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Glossary from './routes/Glossary'
+import FishList from './routes/FishList'
 
 
 
@@ -23,8 +24,11 @@ function App() {
       <Route path="/sushitype" element={<SushiType />} />
       <Route path="/fishcategory" element={<FishCategory />} />
       <Route path="/glossary" element={<Glossary />} />
+      <Route path="/category/:categoryId" element={<FishList />} />
+
     </Routes>
-    </div></div>
+    </div>
+    </div>
     </BrowserRouter>
     </>
   )
