@@ -4,7 +4,7 @@ from .views import FishCatergoryViewSet, FishViewSet, GlossaryViewSet
 
 
 router = DefaultRouter()
-router.register('sushi_category', FishCatergoryViewSet, basename='sushi_category')
+router.register('fish_category', FishCatergoryViewSet, basename='fish_category')
 router.register('fish', FishViewSet, basename='fish')
 router.register('glossary', GlossaryViewSet, basename='glossary')
 

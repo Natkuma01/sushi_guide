@@ -8,7 +8,7 @@ function FishCategory() {
   const [fishCategory, setFishCategory] = useState([])
   
   useEffect(()=> {
-    axios.get("http://127.0.0.1:8000/fishes/sushi_category/")
+    axios.get("http://127.0.0.1:8000/fishes/fish_category/")
       .then( res => {
         setFishCategory(res.data)
       }).catch(err =>{
@@ -16,6 +16,7 @@ function FishCategory() {
     })
   }, [])
 
+  
 
 
 
@@ -25,7 +26,7 @@ function FishCategory() {
     <div className='mx-6 md:mx-12 lg:mx-24 xl:mx-32'>
     <div>{fishCategory.map(fish => (
         <div key={fish.id}>
-            <p className='text-3xl font-bold m-5'>{fish.name}</p>
+            <p className='text-3xl font-bold m-5' onClick={routeChange}>{fish.name}</p>
             <div className='flex justify-center items-center mt-10 mb-10'>
 
             <button className='thick-arrow-left onClick={() => handleLeftArrow()} mx-5' />
