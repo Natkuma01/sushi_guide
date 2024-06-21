@@ -3,12 +3,7 @@ from django.db import models
 
 class FishCategory(models.Model):
     name = models.CharField(max_length=100)
-    image1 = models.URLField(null=True)
-    image2 = models.URLField(null=True)
-    image3 = models.URLField(null=True)
-    image4 = models.URLField(null=True)
-    image5 = models.URLField(null=True)
-
+    image_urls = models.JSONField(default=list, null=True)
     description = models.TextField()
 
 
@@ -18,9 +13,7 @@ class FishCategory(models.Model):
 
 class Fish(models.Model):
     name = models.CharField(max_length=100)
-    image1 = models.URLField(null=True)
-    image2 = models.URLField(null=True)
-    image3 = models.URLField(null=True)
+    image_urls = models.JSONField(default=list, null=True)
     family = models.ForeignKey(
         FishCategory,
         related_name='fishes',

@@ -1,7 +1,7 @@
 .thick-arrow-right {
-    width: 25px;
-    height: 25px;
-    border: 10px solid #333;
+    width: 15px;
+    height: 15px;
+    border: 5px solid #333;
     border-left: 0;
     border-top: 0;
   
@@ -9,9 +9,9 @@
   }
 
   .thick-arrow-left {
-    width: 25px;
-    height: 25px;
-    border: 10px solid #333;
+    width: 15px;
+    height: 15px;
+    border: 5px solid #333;
     border-left: 0;
     border-top: 0;
   

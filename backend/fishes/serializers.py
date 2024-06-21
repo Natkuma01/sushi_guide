@@ -8,11 +8,7 @@ class FishCategorySerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'name',
-            'image1',
-            'image2',
-            'image3',
-            'image4',
-            'image5',
+            'image_urls',
             'description',
         )
 
@@ -22,9 +18,7 @@ class FishSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'name',
-            'image1',
-            'image2',
-            'image3',
+            'image_urls',
             'family',
             'description',
             'taste',
