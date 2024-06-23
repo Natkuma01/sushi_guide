@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Carousel } from 'react-responsive-carousel'
 import axios from 'axios'
 import './FishCategory.css'
 
