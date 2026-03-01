@@ -19,7 +19,7 @@ function SushiType() {
   return (
     <>
     <div>
-      <h1 className='flex justify-center items-center mt-5'>Sushi Type</h1>
+      <p className='flex justify-center items-center mt-5 font-extrabold text-4xl'>Sushi Type</p>
       <div className='mx-6 md:mx-12 lg:mx-24 xl:mx-32'>
         {sushitype.map(type => (
           <div key={type.id}>

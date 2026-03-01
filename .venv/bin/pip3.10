@@ -1,4 +1,4 @@
-#!/Users/nataliechan/projects/chingu/sushi_guide/.venv/bin/python
+#!/Users/nataliechan/Desktop/projects/sushi_guide/.venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys

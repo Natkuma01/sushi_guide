@@ -7,7 +7,7 @@ function FishList() {
   const { categoryId } = useParams()
   const [fishes, setFishes] = useState([])
   const [categoryName, setCategoryName] = useState("")
-  const [current, setCurrent] = useState(0)
+  const [currentSlides, setCurrentSlides] = useState({})
 
 
   useEffect(() => {
@@ -26,16 +26,20 @@ function FishList() {
       });
   }, [categoryId]);
 
-  const nextSlide = () => {
-    const isLastSlide = current === 2
-    const newIndex = isLastSlide ? 0: current + 1
-    setCurrent(newIndex)
+  const nextSlide = (fishId, totalImages) => {
+    setCurrentSlides(prev => {
+      const current = prev[fishId] ?? 0
+      const isLastSlide = current === totalImages - 1
+      return { ...prev, [fishId]: isLastSlide ? 0 : current + 1 }
+    })
   }
 
-  const prevSlide = () => {
-    const isFirstSlide = current === 0
-    const newIndex = isFirstSlide ? 2 : current - 1
-    setCurrent(newIndex)
+  const prevSlide = (fishId, totalImages) => {
+    setCurrentSlides(prev => {
+      const current = prev[fishId] ?? 0
+      const isFirstSlide = current === 0
+      return { ...prev, [fishId]: isFirstSlide ? totalImages - 1 : current - 1 }
+    })
   }
 
   return (
@@ -46,9 +50,9 @@ function FishList() {
           <div key={fish.id}>
             <p className='text-3xl font-bold m-5'>{fish.name}</p>
             <div className='flex justify-center items-center'>
-            <button onClick={nextSlide} className="thick-arrow-left m-5" />
-           <img className='max-h-56 rounded-md drop-shadow-md my-8' src={fish.image_urls[current]} />
-          <button onClick={prevSlide} className="thick-arrow-right m-5" />
+            <button onClick={() => nextSlide(fish.id, fish.image_urls.length)} className="thick-arrow-left m-5" />
+           <img className='max-h-56 rounded-md drop-shadow-md my-8' src={fish.image_urls[currentSlides[fish.id] ?? 0]} />
+          <button onClick={() => prevSlide(fish.id, fish.image_urls.length)} className="thick-arrow-right m-5" />
           </div>
             <p className='mb-3 mx-6 md:mx-10 lg:mx-10 xl:mx-18'>{fish.description}</p>
             <p className='mb-3 mx-6 md:mx-10 lg:mx-10 xl:mx-18'>Taste: {fish.taste}</p>
